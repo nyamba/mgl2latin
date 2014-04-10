@@ -16,8 +16,6 @@ def check_to_latin(src, result):
         rr = ','.join(ws)
         assert rr == result[i], 'failed on %s -%s' % (rr, result[i])
 
-    return True
-
 
 def to_latin(cyrilic_text):
     chars = {
