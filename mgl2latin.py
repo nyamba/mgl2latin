@@ -28,7 +28,10 @@ def to_latin(cyrilic_text):
 
     words = ['']
     for c in cyrilic_text:
-        cc = chars[c]
+        try:
+            cc = chars[c]
+        except:
+            cc = c
         _words = []
         for ch in cc:
             for w in words:
@@ -40,7 +43,10 @@ def to_latin(cyrilic_text):
 
 if __name__ == '__main__':
     check_to_latin([u'хадаа'], ['hadaa,khadaa,xadaa'])
-    check_to_latin([u'хөдөө'], ['hodoo,khodoo,xodoo,huduu,khuduu,xuduu'])
+    check_to_latin([u'цагаан'], ['tsagaan'])
+    check_to_latin([u'цув'], ['tsuv,tsyv'])
+    check_to_latin([u'movie'], ['movie'])
+    #check_to_latin([u'хөдөө'], ['hodoo,khodoo,xodoo,huduu,khuduu,xuduu'])
     check_to_latin([u'ф', u'ц', u'у', u'ж', u'э', u'н', u'г', u'ш', u'ү', u'з', u'к', u'ъ', u'е', u'щ', \
             u'й', u'ы', u'б', u'ө', u'а', u'х', u'р', u'о', u'л', u'д', u'п', u'я', u'ч', u'ё', u'с', u'м', \
             u'и', u'т', u'ь', u'в', u'ю'], ['p,f', 'ts', 'u,y', 'j', 'e', 'n', 'g', 'sh', 'u,y', 'z', 'k', 'i', \
