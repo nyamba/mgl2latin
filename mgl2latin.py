@@ -1,14 +1,6 @@
 # -*- coding: utf-8 -*-
 
 def check_to_latin(src, result):
-    '''
-    >>> check_to_latin([u'ф', u'ц', u'у', u'ж', u'э', u'н', u'г', u'ш', u'ү', u'з', u'к', u'ъ', u'е', u'щ', \
-            u'й', u'ы', u'б', u'ө', u'а', u'х', u'р', u'о', u'л', u'д', u'п', u'я', u'ч', u'ё', u'с', u'м', \
-            u'и', u'т', u'ь', u'в', u'ю'], ['p,f', 'ts', 'u,y', 'j', 'e', 'n', 'g', 'sh', 'u,y', 'z', 'k', 'i', \
-            'e', 'sh', 'i', 'i,ii,y', 'b', 'o,u', 'a', 'h,x,kh', 'r', 'o', 'l', 'd', 'p,f', 'ya', 'ch', 'yo', \
-            's,c', 'm', 'i', 't', 'i', 'v', 'yu'])
-    True
-    '''
     assert len(src) == len(result), 'No same length'
 
     for i in range(len(src)):
